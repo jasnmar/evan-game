@@ -1,0 +1,232 @@
+:root{
+    --primary-color: #011e34;
+    --secondary-color: #FF9944;
+    --accent-color: #FFFFFF;
+    --correct-color: #8CCA76;
+    --incorrect-color: #FF4848;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Karla", sans-serif;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    display: flex;
+    justify-content: center;
+}
+
+
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.start-game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.play-game{
+    overflow-y: scroll;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+}
+
+.play-game::-webkit-scrollbar {
+    display: none;
+}
+
+.game-title {
+    margin: 0px;
+    font-size: 2rem;
+    padding: 0px;
+}
+
+.game-description {
+    font-size: 1.5rem;
+}
+
+.question-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+.question-text {
+    font-family: "Karla", sans-serif;
+    font-size: 1.25rem;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.answer-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.answer-text{
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 1em;
+    padding: 0.5em;
+    min-width: 200px;
+    text-align: center;
+}
+
+.correct-answer {
+    background-color: var(--correct-color);
+    border: none;
+}
+  
+.incorrect-answer {
+    background-color: var(--incorrect-color);
+    border: none;
+}
+
+.selected-answer{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+}
+
+.unselected-answer {
+    background-color: var(--primary-color);
+}
+
+button {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 1em;
+    padding: 0.5em;
+    min-width: 200px;
+}
+
+@media (min-width: 576px) {
+
+    .game-title {
+        font-size: 2.25rem;
+    }
+    
+    .game-description {
+        font-size: 1.75rem;
+    }
+
+    .question-text {
+        font-size: 1.75rem;
+    }
+
+    .answer-text, .game-btn{
+        font-size: 1.5rem;
+        min-width: 200px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .game-title {
+        font-size: 2.5rem;
+    }
+    
+    .game-description {
+        font-size: 2rem;
+    }
+
+    .question-text {
+        font-size: 2rem;
+    }
+
+    .answer-text, .game-btn{
+        font-size: 1.75rem;
+        margin: 1em;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .app{
+        margin: 0 10em;
+    }
+
+    .game{
+        text-align: left;
+    }
+
+    .start-game{
+        height: 85vh;
+    }
+
+    .play-game{
+        height: 100vh;
+    }
+
+    .game-title {
+        font-size: 2.75rem;
+    }
+    
+    .game-description {
+        font-size: 2.25rem;
+    }
+
+    .question-container{
+        margin: 2em 0px;
+        height: 90vh;
+    }
+
+    .question-container-contents{
+        border-left: 10px solid var(--secondary-color);
+        padding-left: 4em;
+    }
+
+    .question-text {
+        width: 90%;
+        font-size: 2.5rem;
+        margin: 0;
+        padding: 0 0 1em 0;
+    }
+
+    .answer-container{
+        flex-direction: row;
+        align-items: start;
+        justify-content: start;
+    }
+
+    .answer-text{
+        font-size: 1.5rem;
+        min-width: 200px;
+        margin-left: 0px;
+        margin-right: 2em;
+    }
+
+    .button-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -10em;
+    }
+
+    button{
+        font-size: 1.5rem;
+        min-width: 200px;
+    }
+
+}
